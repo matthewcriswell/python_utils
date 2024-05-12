@@ -26,12 +26,8 @@ def get_expiration_date(cert_info):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Retrieves TLS/SSL certificate information from a given endpoint"
-    )
-    parser.add_argument(
-        "-e", "--endpoint", help="endpoint to check", default="reddit.com", type=str
-    )
+    parser = argparse.ArgumentParser(description="Retrieves TLS/SSL certificate information from a given endpoint")
+    parser.add_argument("-e", "--endpoint", help="endpoint to check", default="reddit.com", type=str)
     args = parser.parse_args()
     return args.endpoint
 
